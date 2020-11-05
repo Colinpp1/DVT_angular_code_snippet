@@ -1,0 +1,13 @@
+<br>
+<div class="row">
+  <div class="col-md-12" > 
+    <input type="text" class="form-control"  placeholder="Search Here" [(ngModel)]="searchedKeyword">
+</div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-3" *ngFor="let product of productList | filter:searchedKeyword">
+    <app-product-item [productItem]="product"></app-product-item>
+  </div>
+</div>
+
